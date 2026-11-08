@@ -1,6 +1,12 @@
 import { Catalogue } from '@/components/catalogue';
 import { PageIntro } from '@/components/ui';
-export const metadata = { title: 'Services & Prices' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/services',
+  title: 'Beauty Services & Prices | Urban Beauti Salon',
+  description:
+    'Explore hair, skin, makeup and nail services at Urban Beauti Salon, with sample prices and estimated treatment times.',
+});
 export default async function Page({
   searchParams,
 }: {

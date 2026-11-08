@@ -15,4 +15,4 @@ Fonts: Cormorant Garamond and Manrope, self-hosted Latin WOFF2 variants from Goo
 
 Flower/utility icons are Lucide React (ISC). The favicon/wordmark composition is original, provisional brand styling awaiting owner approval.
 
-Indian bridal photograph (`public/images/bridal.jpg`): [dras koli on Unsplash](https://unsplash.com/photos/a-woman-in-a-red-bridal-outfit-c6hs0HT9pZs), image https://images.unsplash.com/photo-1677691256999-45d69a11b197 . The source states free use under the Unsplash License. Displayed as stock bridal inspiration, not the salon's work.
+Indian bridal photograph (`public/images/bridal.jpg`): [dras koli on Unsplash](https://unsplash.com/photos/a-woman-in-a-red-bridal-outfit-c6hs0HT9pZs), image https://images.unsplash.com/photo-1677691256999-45d69a11b197 . The source states free use under the Unsplash License. Used on the bridal page and in the website’s social preview, where the image is labeled as a stock portrait.

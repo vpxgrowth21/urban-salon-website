@@ -1,7 +1,13 @@
 import { MapPin, Clock3, MessageCircle, Phone } from 'lucide-react';
 import { PageIntro } from '@/components/ui';
 import { EnquiryForm } from '@/components/enquiry-form';
-export const metadata = { title: 'Contact & Location' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/contact',
+  title: 'Contact Urban Beauti Salon | Gandhinagar',
+  description:
+    'Find Urban Beauti Salon’s location information for Gandhinagar and explore the demo enquiry form.',
+});
 export default function Page() {
   return (
     <>

@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import { PageIntro, EmptyState } from '@/components/ui';
-export const metadata = { title: 'Offers & Beauty Packages' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/offers',
+  title: 'Offers & Beauty Packages | Urban Beauti Salon',
+  description: 'Explore sample beauty packages and see where salon-approved offers will appear.',
+});
 export default function Page() {
   return (
     <>

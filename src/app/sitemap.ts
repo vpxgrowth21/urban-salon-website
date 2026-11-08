@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/lib/demo/catalogue';
+import { siteOrigin } from '@/lib/site-metadata';
 export default function sitemap(): MetadataRoute.Sitemap {
-  const origin = process.env.NEXT_PUBLIC_SITE_URL;
-  if (!origin) return [];
   return [
     '',
     '/services',
@@ -12,5 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/offers',
     ...services.map((s) => `/services/${s.id}`),
-  ].map((path) => ({ url: new URL(path, origin).href }));
+  ].map((path) => ({ url: new URL(path, siteOrigin).href }));
 }

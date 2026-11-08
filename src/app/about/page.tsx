@@ -2,7 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { PageIntro } from '@/components/ui';
-export const metadata = { title: 'About Urban Beauti' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/about',
+  title: 'About Urban Beauti Salon | Gandhinagar',
+  description:
+    'Meet Urban Beauti Salon, a ladies beauty salon in Gandhinagar, and explore the website demonstration.',
+});
 export default function Page() {
   return (
     <>

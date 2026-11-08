@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { EnquiryForm } from '@/components/enquiry-form';
 import { PageIntro } from '@/components/ui';
-export const metadata = { title: 'Bridal & Occasion Beauty' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/bridal',
+  title: 'Bridal & Occasion Makeup | Urban Beauti Salon',
+  description:
+    'Explore bridal makeup, occasion hairstyling, draping and pre-bridal care, and try the demo consultation form.',
+});
 export default function Page() {
   return (
     <>

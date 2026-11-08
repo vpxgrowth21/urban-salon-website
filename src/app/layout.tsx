@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { DemoProvider } from '@/components/demo-provider';
 import { Header, Footer } from '@/components/site-shell';
+import { homeDescription, homeTitle, siteName, siteOrigin } from '@/lib/site-metadata';
 import './globals.css';
 const editorial = localFont({
   src: [
@@ -18,22 +19,10 @@ const manrope = localFont({
   display: 'swap',
 });
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
-  ),
-  title: {
-    default: 'Urban Beauti Salon | Beauty, on your terms',
-    template: '%s | Urban Beauti Salon',
-  },
-  description:
-    'Explore an illustrative beauty service menu and a simple appointment request demo for Urban Beauti Salon, Gandhinagar.',
+  metadataBase: new URL(siteOrigin),
+  title: { default: homeTitle, template: `%s | ${siteName}` },
+  description: homeDescription,
   robots: { index: false, follow: false },
-  openGraph: {
-    title: 'Urban Beauti Salon',
-    description: 'A little time for yourself. Explore the frontend demonstration.',
-    images: [{ url: '/images/hero.jpg', width: 1400, height: 2100 }],
-  },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

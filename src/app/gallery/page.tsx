@@ -1,6 +1,12 @@
 import { PageIntro } from '@/components/ui';
 import { Gallery } from '@/components/gallery';
-export const metadata = { title: 'Beauty Inspiration Gallery' };
+import { publicPageMetadata } from '@/lib/site-metadata';
+export const metadata = publicPageMetadata({
+  path: '/gallery',
+  title: 'Beauty Gallery | Urban Beauti Salon',
+  description:
+    'Browse stock inspiration for bridal makeup, hair, nails and beauty treatments at Urban Beauti Salon.',
+});
 export default function Page() {
   return (
     <>
