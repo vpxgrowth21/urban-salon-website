@@ -10,7 +10,7 @@ export const homeDescription =
   'Discover Urban Beauti Salon in Gandhinagar. Explore beauty services, sample prices and a demo appointment request.';
 
 const shareImage = {
-  url: '/opengraph-image.jpg',
+  url: '/opengraph-image.jpg?v=2',
   width: 1200,
   height: 630,
   type: 'image/jpeg',
