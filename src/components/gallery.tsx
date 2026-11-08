@@ -27,8 +27,8 @@ export function Gallery() {
         ))}
       </div>
       <div className="notice">
-        Curated stock imagery for this demonstration. These photos are inspiration, and are not
-        Urban Beauti’s client work or salon premises.
+        Stock imagery and an AI-generated hair portrait for this demonstration. These images are
+        inspiration, and are not Urban Beauti’s client work or salon premises.
       </div>
       <div className="gallery-grid">
         {list.map((x, i) => (
@@ -41,7 +41,7 @@ export function Gallery() {
             <div>
               <Image
                 src={x.image}
-                alt={`Stock inspiration: ${x.title}`}
+                alt={x.alt ?? `Stock inspiration: ${x.title}`}
                 fill
                 sizes="(max-width: 700px) 43vw, 29vw"
                 style={{ objectPosition: x.position }}
@@ -79,7 +79,7 @@ export function Gallery() {
                 <div className="lightbox-photo">
                   <Image
                     src={item.image}
-                    alt={`Demonstration stock photograph: ${item.title}`}
+                    alt={item.alt ?? `Demonstration stock photograph: ${item.title}`}
                     fill
                     sizes="90vw"
                   />
@@ -88,8 +88,7 @@ export function Gallery() {
                   <h2>{item.title}</h2>
                 </Dialog.Title>
                 <Dialog.Description>
-                  Stock photography · Demonstration inspiration only · {(active || 0) + 1} of{' '}
-                  {list.length}
+                  Demonstration inspiration only · {(active || 0) + 1} of {list.length}
                 </Dialog.Description>
               </>
             )}

@@ -5,7 +5,7 @@ export const metadata = publicPageMetadata({
   path: '/gallery',
   title: 'Beauty Gallery | Urban Beauti Salon',
   description:
-    'Browse stock inspiration for bridal makeup, hair, nails and beauty treatments at Urban Beauti Salon.',
+    'Browse beauty inspiration for bridal makeup, hair, nails and beauty treatments at Urban Beauti Salon.',
 });
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
       <PageIntro
         eyebrow="Beauty inspiration"
         title={<>Our Beauty Gallery</>}
-        description="Explore stock beauty inspiration for this demonstration. These images are not Urban Beauti’s client work."
+        description="Explore beauty inspiration for this demonstration. These images are not Urban Beauti’s client work."
       />
       <Gallery />
     </>

@@ -9,8 +9,16 @@ export const business = {
   address: null,
   instagram: null,
 } as const;
+export const hairPortrait = {
+  image: '/images/hair-campaign.jpg',
+  alt: 'AI-generated portrait of a woman with layered chestnut hair and honey highlights',
+  position: '50% 0%',
+};
+
+export type DemoImage = { image: string; alt?: string; position?: string };
+
 export const categories: { id: CategoryId; name: string; subtitle: string; image: string }[] = [
-  { id: 'hair', name: 'Hair', subtitle: 'Cut, colour & care', image: '/images/hair.jpg' },
+  { id: 'hair', name: 'Hair', subtitle: 'Cut, colour & care', image: hairPortrait.image },
   { id: 'facials', name: 'Facials', subtitle: 'Your time to glow', image: '/images/facial.jpg' },
   { id: 'threading', name: 'Threading', subtitle: 'The finer details', image: '/images/hero.jpg' },
   { id: 'waxing', name: 'Waxing', subtitle: 'Smooth & simple', image: '/images/facial.jpg' },
@@ -237,7 +245,7 @@ export const services: Service[] = groups.flatMap((g) =>
       }) as Service,
   ),
 );
-export const gallery = [
+export const gallery: (DemoImage & { id: string; category: string; title: string })[] = [
   {
     id: 'bridal',
     category: 'Bridal',
@@ -255,9 +263,8 @@ export const gallery = [
   {
     id: 'hair',
     category: 'Hair',
-    image: '/images/hair.jpg',
     title: 'Texture with a little personality',
-    position: '50% 40%',
+    ...hairPortrait,
   },
   {
     id: 'nails',

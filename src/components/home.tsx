@@ -17,10 +17,16 @@ import {
   Hand,
   Layers,
 } from 'lucide-react';
-import { categories, faqs } from '@/lib/demo/catalogue';
+import { categories, faqs, hairPortrait, type DemoImage } from '@/lib/demo/catalogue';
 import { useDemo } from './demo-provider';
 import { DemoPriceNotice, SectionHeading, ServiceRow } from './ui';
 const icons = [Scissors, Sparkles, Flower2, Leaf, Paintbrush, Heart, Hand, Layers];
+const homeGallery: (DemoImage & { label: string })[] = [
+  { ...hairPortrait, label: 'Hair that moves with you' },
+  { image: '/images/nails.jpg', label: 'It’s all in the details' },
+  { image: '/images/facial.jpg', label: 'Make room for your ritual' },
+];
+
 export function Home() {
   const { state } = useDemo();
   const [category, setCategory] = useState('popular');
@@ -181,18 +187,15 @@ export function Home() {
           description="Explore hair, makeup and beauty inspiration. Demonstration photography only."
         />
         <div className="home-gallery">
-          {[
-            { img: 'hair', label: 'Hair that moves with you' },
-            { img: 'nails', label: 'It’s all in the details' },
-            { img: 'facial', label: 'Make room for your ritual' },
-          ].map((x) => (
-            <Link href="/gallery" key={x.img}>
+          {homeGallery.map((x) => (
+            <Link href="/gallery" key={x.image}>
               <div>
                 <Image
-                  src={`/images/${x.img}.jpg`}
-                  alt={`Stock inspiration: ${x.label}`}
+                  src={x.image}
+                  alt={x.alt ?? `Stock inspiration: ${x.label}`}
                   fill
                   sizes="(max-width: 700px) 80vw, 30vw"
+                  style={{ objectPosition: x.position }}
                 />
               </div>
               <span>
@@ -203,8 +206,8 @@ export function Home() {
           ))}
         </div>
         <p className="muted caption gallery-note">
-          Curated stock photography for this demonstration. Our salon portfolio is coming after
-          owner approval.
+          Stock photography and an AI-generated hair portrait for this demonstration. Our salon
+          portfolio is coming after owner approval.
         </p>
       </section>
       <section className="care-section section">

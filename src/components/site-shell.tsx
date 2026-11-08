@@ -1,14 +1,20 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { ArrowUpRight, Menu, X, MapPin, Flower2 } from 'lucide-react';
+import { ArrowUpRight, Menu, X, MapPin } from 'lucide-react';
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Urban Beauti Salon home">
-      <span className="brand-symbol">
-        <Flower2 strokeWidth={1} />
-      </span>
+      <Image
+        className="brand-symbol"
+        src="/images/urban-beauti-monogram.webp"
+        alt=""
+        width={160}
+        height={113}
+        unoptimized
+      />
       <span>
         URBAN BEAUTI<small>S A L O N</small>
       </span>
@@ -121,7 +127,7 @@ export function Footer() {
           </div>
         </div>
         <p className="demo-disclosure">
-          Illustrative services, prices and stock photography. No real appointments or messages.
+          Illustrative services, prices and demonstration imagery. No real appointments or messages.
           Please use sample details. Contact information and final salon rates await owner approval.
         </p>
       </footer>
