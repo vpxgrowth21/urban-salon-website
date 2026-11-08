@@ -10,11 +10,11 @@ export const homeDescription =
   'Discover Urban Beauti Salon in Gandhinagar. Explore beauty services, sample prices and a demo appointment request.';
 
 const shareImage = {
-  url: '/opengraph-image.jpg?v=2',
-  width: 1200,
-  height: 630,
-  type: 'image/jpeg',
-  alt: 'Urban Beauti Salon website preview. Your Beauty. Your Moment. Ladies beauty salon in Gandhinagar, alongside a stock Indian bridal portrait.',
+  url: '/opengraph-image.png',
+  width: 1731,
+  height: 909,
+  type: 'image/png',
+  alt: 'Urban Beauti Salon in Gandhinagar. Your Beauty. Your Moment. A collage of hairstyling, skincare, threading, waxing, nail care and bridal makeup.',
 };
 
 export function publicPageMetadata({
